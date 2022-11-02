@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: mkdir Multiplayer && mv test.txt Multiplayer/test.txt
+    - run: mkdir -p output/Multiplayer && mv test.txt output/Multiplayer/test.txt
     - name: Upload Mod Artifacts
       uses: actions/upload-artifact@v2
       with:
         name: Multiplayer
         path: |
-          Multiplayer/
+          output/
